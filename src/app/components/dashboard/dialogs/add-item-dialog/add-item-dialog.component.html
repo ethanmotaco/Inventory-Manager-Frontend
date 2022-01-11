@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>{{data.storeName}}</h1>
+<mat-dialog-content>
+    <p>Choose product to add</p>
+    <mat-selection-list #products [multiple]="false" (selectionChange)="onSelectionChanged(products.selectedOptions.selected)">
+        <mat-list-option *ngFor="let product of productList" [value]="product" >{{product.name}}</mat-list-option>
+    </mat-selection-list>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button (click)="onNoClick()">Cancel</button>
+</mat-dialog-actions>

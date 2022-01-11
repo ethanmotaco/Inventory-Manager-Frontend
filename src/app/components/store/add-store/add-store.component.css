@@ -1,0 +1,37 @@
+.main-container {
+    padding: 16px
+    
+}
+
+.content-container {
+    width: fit-content;
+    height: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+::ng-deep div.mat-card-header-text {
+    margin-left: 0px;
+}
+
+.mat-card {
+    width: fit-content;
+    height: fit-content;
+    border-radius: 10px;
+}
+
+.card-container {
+    padding: 16px;
+}
+
+.mat-raised-button {
+    background-color: #264a8d;
+    color: white;
+    margin-left: auto;
+    margin-right: 0px;
+    display: block;
+}
+  
+.form-field {
+    width: 100%;
+}

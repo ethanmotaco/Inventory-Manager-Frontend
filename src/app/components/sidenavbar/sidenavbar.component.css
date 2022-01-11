@@ -1,0 +1,18 @@
+.mat-icon{
+    vertical-align: center;
+    margin-right: 1rem;
+}
+
+.mat-expansion-panel {
+    box-shadow: none;
+}
+
+.mat-expansion-panel-header {
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: inherit;
+    box-shadow: none;
+    display:flex;
+  } 
+
+

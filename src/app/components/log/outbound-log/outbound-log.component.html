@@ -1,0 +1,42 @@
+<div class="main-container">
+  <div class="content-container">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          Outbound Logs
+        </mat-card-title>
+      </mat-card-header>
+      <div class="table-container">
+        <table mat-table [dataSource]="logsDataSource" class="full-width-table" matSort>
+
+          <!-- Store Name Column -->
+          <ng-container matColumnDef="store">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Store</th>
+            <td mat-cell *matCellDef="let log">{{log.store}}</td>
+          </ng-container>
+
+          <!-- Product Name Column -->
+          <ng-container matColumnDef="product">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Product</th>
+            <td mat-cell *matCellDef="let log">{{log.product}}</td>
+          </ng-container>
+
+          <!-- Quantity Column -->
+          <ng-container matColumnDef="quantity">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Quantity</th>
+            <td mat-cell *matCellDef="let log">{{log.quantity}}</td>
+          </ng-container>
+
+          <!-- Timestamp Column -->
+          <ng-container matColumnDef="timestamp">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Timestamp</th>
+            <td mat-cell *matCellDef="let log">{{log.timestamp}}</td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns;  sticky: true"></tr>
+          <tr mat-row *matRowDef="let log; columns: displayedColumns;"></tr>
+        </table>
+      </div>
+    </mat-card>
+  </div>
+</div>

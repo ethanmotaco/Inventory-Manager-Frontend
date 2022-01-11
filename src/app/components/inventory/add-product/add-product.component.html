@@ -1,0 +1,32 @@
+<div class="main-container">
+    <div class="content-container">
+        <mat-card>
+            <div class="card-container">
+                <mat-card-header>
+                    <mat-card-title>
+                        Add Product
+                    </mat-card-title>
+                </mat-card-header>
+                <form [formGroup]="myForm" #formDirective="ngForm"
+                    (ngSubmit)="submitHandler(formDirective);  myForm.reset()">
+                    <mat-form-field class="form-field" appearance="outline">
+                        <mat-label>Product Name</mat-label>
+                        <input formControlName="name" maxlength="32" type="text" matInput placeholder="Ex. iPhone X">
+                        <mat-error *ngIf="form['name'].errors?.['required']">
+                            Product name is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field class="form-field" appearance="outline">
+                        <mat-label>Description</mat-label>
+                        <textarea formControlName="description" type="text" matInput
+                            placeholder="Ex. 2020 Limited Edition"></textarea>
+                        <mat-error *ngIf="form['description'].errors?.['required']">
+                            Description is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <button mat-raised-button [disabled]="myForm.invalid" type=submit>Submit</button>
+                </form>
+            </div>
+        </mat-card>
+    </div>
+</div>

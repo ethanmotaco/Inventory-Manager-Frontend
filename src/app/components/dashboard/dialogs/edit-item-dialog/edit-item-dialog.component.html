@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>{{data.product.name}}</h1>
+<mat-dialog-content>
+    <p>Edit quantity here</p>
+        <mat-form-field appearance="fill" >
+            <mat-label>Quanity</mat-label>
+            <input matInput id="quantity" type="number" value={{data.quantity}} min="0">
+            <span matSuffix>units</span>
+        </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button (click)="onSubmit()">Submit</button>
+</mat-dialog-actions>

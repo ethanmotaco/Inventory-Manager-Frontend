@@ -1,0 +1,53 @@
+<div class="main-container">
+    <div class="content-container">
+        <mat-card>
+            <div class="card-container">
+                <mat-card-header>
+                    <mat-card-title>
+                        Add Store
+                    </mat-card-title>
+                </mat-card-header>
+                <form [formGroup]="myForm" #formDirective="ngForm"
+                    (ngSubmit)="submitHandler(formDirective);  myForm.reset()">
+                    <mat-form-field class="form-field" appearance="outline">
+                        <mat-label>Store Name</mat-label>
+                        <input formControlName="name" type="text" matInput placeholder="Ex. QuickMart">
+                        <mat-error *ngIf="form['name'].errors?.['required']">
+                            Store name is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field class="form-field" appearance="outline">
+                        <mat-label>Address</mat-label>
+                        <input formControlName="address" type="text" matInput
+                            placeholder="Ex. 4736 Southside Lane, Irvine, CA">
+                        <mat-error *ngIf="form['address'].errors?.['required']">
+                            Address is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field class="form-field" appearance="outline">
+                        <mat-label>Phone Number</mat-label>
+                        <input formControlName="phone" type="text" matInput mask='000-000-0000'
+                            placeholder="Ex. 000-000-0000">
+                        <mat-error *ngIf="form['phone'].errors?.['required']">
+                            Phone Number is <strong>required</strong>
+                        </mat-error>
+                        <mat-error *ngIf="form['phone'].errors?.['minlength']">
+                            Please enter a valid phone number
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field class="form-field" appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input formControlName="email" type="text" matInput placeholder="Ex. contact@store.com">
+                        <mat-error *ngIf="form['email'].errors?.['required']">
+                            Email is <strong>required</strong>
+                        </mat-error>
+                        <mat-error *ngIf="form['email'].errors?.['email']">
+                            Please enter a valid email address
+                        </mat-error>
+                    </mat-form-field>
+                    <button mat-raised-button [disabled]="myForm.invalid" type=submit>Submit</button>
+                </form>
+            </div>
+        </mat-card>
+    </div>
+</div>

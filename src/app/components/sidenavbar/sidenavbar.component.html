@@ -1,0 +1,42 @@
+<mat-nav-list>
+    <mat-list-item mat-list-item routerLink="/dashboard" routerLinkActive="list-item-active">
+        <mat-icon>dashboard</mat-icon>Dashboard
+    </mat-list-item>
+
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-icon>shopping_cart</mat-icon>Stores
+        </mat-expansion-panel-header>
+        <mat-list-item mat-list-item routerLink="/stores" routerLinkActive="list-item-active">
+            View Stores
+        </mat-list-item>
+        <mat-list-item mat-list-item routerLink="/stores/add" routerLinkActive="list-item-active">
+            Add Store
+        </mat-list-item>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-icon>shopping_basket</mat-icon>Inventory
+        </mat-expansion-panel-header>
+        <mat-list-item mat-list-item routerLink="/inventory" routerLinkActive="list-item-active">
+            View Catalog
+        </mat-list-item>
+        <mat-list-item mat-list-item routerLink="/inventory/add" routerLinkActive="list-item-active">
+            Add Product
+        </mat-list-item>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-icon>list</mat-icon>Logs
+        </mat-expansion-panel-header>
+        <mat-list-item mat-list-item routerLink="/logs/inbound" routerLinkActive="list-item-active">
+            Inbound Logs
+        </mat-list-item>
+        <mat-list-item mat-list-item routerLink="/logs/outbound" routerLinkActive="list-item-active">
+            Outbound Logs
+        </mat-list-item>
+    </mat-expansion-panel>
+
+</mat-nav-list>

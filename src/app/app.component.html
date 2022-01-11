@@ -1,0 +1,9 @@
+<app-topnavbar (toggleSidebarEmitter)="sideBarToggler()"></app-topnavbar>
+<mat-drawer-container>
+    <mat-drawer mode="over" [opened]="sideBarIsOpen">
+        <app-sidenavbar></app-sidenavbar>
+    </mat-drawer>
+    <mat-drawer-container>
+        <router-outlet></router-outlet>
+    </mat-drawer-container>
+</mat-drawer-container>
